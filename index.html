@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
 <html lang="da">
 <head>
   <meta charset="UTF-8" />
@@ -33,6 +48,7 @@
       --purple: #D9C4F5;
       --dark: #1a1a2e;
       --white: #ffffff;
+      font-size: 18px; /* ← BASE FONT SIZE ØGET */
     }
 
     body {
@@ -86,7 +102,7 @@
       position: absolute;
       top: 32px;
       left: 48px;
-      height: 36px;
+      height: 44px; /* ← STØRRE LOGO */
       opacity: 0.9;
     }
     .logo-white { filter: brightness(0) invert(1); }
@@ -96,14 +112,14 @@
       position: absolute;
       bottom: 28px;
       right: 48px;
-      font-size: 13px;
+      font-size: 0.8rem;
       font-weight: 400;
       opacity: 0.4;
       letter-spacing: 1px;
     }
 
     .tag {
-      font-size: 13px;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
@@ -111,128 +127,122 @@
       opacity: 0.6;
     }
     h1 {
-      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-size: clamp(3rem, 6vw, 5rem); /* ← STØRRE */
       font-weight: 900;
       line-height: 1.08;
       margin-bottom: 24px;
       text-align: center;
     }
     h2 {
-      font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+      font-size: clamp(2rem, 4vw, 3.2rem); /* ← STØRRE */
       font-weight: 900;
       line-height: 1.1;
       margin-bottom: 20px;
       text-align: center;
     }
     .subtitle {
-      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-size: clamp(1.1rem, 2vw, 1.5rem); /* ← STØRRE */
       font-weight: 400;
       line-height: 1.6;
       text-align: center;
-      max-width: 700px;
+      max-width: 800px;
       opacity: 0.85;
     }
 
     .card-grid {
       display: grid;
-      gap: 20px;
+      gap: 24px;
       width: 100%;
-      max-width: 960px;
-      margin-top: 32px;
+      max-width: 1100px; /* ← BREDERE */
+      margin-top: 36px;
     }
-    .card-grid-2 { grid-template-columns: 1fr 1fr; }
     .card-grid-3 { grid-template-columns: 1fr 1fr 1fr; }
 
     .card {
-      border-radius: 16px;
-      padding: 28px 28px 24px;
+      border-radius: 18px;
+      padding: 32px 32px 28px; /* ← MERE PADDING */
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
     .card-blue   { background: var(--blue); color: var(--white); }
-    .card-cream  { background: var(--cream); color: var(--dark); }
     .card-purple { background: var(--purple); color: var(--dark); }
     .card-white  { background: var(--white); color: var(--dark); box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
-    .card-dark   { background: var(--dark); color: var(--white); }
 
-    .card-icon { font-size: 2rem; margin-bottom: 4px; }
-    .card-title { font-size: 1rem; font-weight: 700; }
-    .card-body  { font-size: 0.88rem; font-weight: 400; line-height: 1.55; opacity: 0.85; }
+    .card-icon  { font-size: 2.4rem; margin-bottom: 4px; } /* ← STØRRE */
+    .card-title { font-size: 1.1rem; font-weight: 700; }   /* ← STØRRE */
+    .card-body  { font-size: 1rem; font-weight: 400; line-height: 1.55; opacity: 0.85; } /* ← STØRRE */
 
+    /* ─── Flow ─── */
     .flow {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0;
-      flex-wrap: nowrap;
-      margin-top: 36px;
+      margin-top: 40px;
       width: 100%;
-      max-width: 1100px;
+      max-width: 1200px; /* ← BREDERE */
     }
     .flow-step {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       flex: 1;
       min-width: 0;
     }
     .flow-box {
       width: 100%;
-      max-width: 150px;
+      max-width: 170px; /* ← STØRRE */
       background: var(--white);
-      border-radius: 14px;
-      padding: 16px 10px;
+      border-radius: 16px;
+      padding: 20px 12px; /* ← MERE PADDING */
       text-align: center;
       box-shadow: 0 4px 18px rgba(44,105,246,0.13);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
-    .flow-box .ficon { font-size: 1.6rem; }
-    .flow-box .flabel { font-size: 0.78rem; font-weight: 700; color: var(--dark); line-height: 1.3; }
-    .flow-box .fsub   { font-size: 0.68rem; color: #666; line-height: 1.3; margin-top: 2px; }
-
+    .flow-box .ficon  { font-size: 2rem; }           /* ← STØRRE */
+    .flow-box .flabel { font-size: 0.88rem; font-weight: 700; color: var(--dark); line-height: 1.3; } /* ← STØRRE */
+    .flow-box .fsub   { font-size: 0.78rem; color: #666; line-height: 1.3; margin-top: 2px; } /* ← STØRRE */
     .flow-arrow {
-      font-size: 1.6rem;
+      font-size: 1.8rem; /* ← STØRRE */
       color: var(--blue);
       flex-shrink: 0;
       padding: 0 4px;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
-
     .flow-num {
-      width: 26px;
-      height: 26px;
+      width: 30px; height: 30px; /* ← STØRRE */
       border-radius: 50%;
       background: var(--blue);
       color: #fff;
-      font-size: 0.75rem;
+      font-size: 0.85rem; /* ← STØRRE */
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
+    /* ─── Før/Efter compare ─── */
     .compare {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 28px;
       width: 100%;
-      max-width: 900px;
+      max-width: 1060px; /* ← BREDERE */
       margin-top: 28px;
     }
     .compare-col {
-      border-radius: 16px;
-      padding: 28px;
+      border-radius: 18px;
+      padding: 32px; /* ← MERE PADDING */
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 16px;
     }
     .compare-label {
-      font-size: 11px;
+      font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
@@ -242,53 +252,91 @@
     .compare-item {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      font-size: 0.88rem;
+      gap: 12px;
+      font-size: 1rem; /* ← STØRRE */
       line-height: 1.5;
     }
-    .compare-item .icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .compare-item .icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
 
-    .benefits {
+    /* ─── Eksempel-slides ─── */
+    .ex-slide-inner {
+      width: 100%;
+      max-width: 1100px; /* ← BREDERE */
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .ex-top {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      width: 100%;
-      max-width: 900px;
-      margin-top: 28px;
+      gap: 24px;
     }
-    .benefit {
-      background: var(--white);
-      border-radius: 14px;
-      padding: 22px 24px;
+    .ex-cell {
+      border-radius: 16px;
+      padding: 28px 30px; /* ← MERE PADDING */
       display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+      flex-direction: column;
+      gap: 12px;
     }
-    .benefit-icon { font-size: 2rem; flex-shrink: 0; }
-    .benefit-text h3 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; color: var(--dark); }
-    .benefit-text p  { font-size: 0.83rem; color: #555; line-height: 1.5; }
+    .ex-cell.old {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .ex-cell.new {
+      background: rgba(44,105,246,0.3);
+      border: 1px solid rgba(44,105,246,0.5);
+    }
+    .ex-cell-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.55;
+    }
+    .ex-cell.new .ex-cell-tag { color: var(--cream); }
+    .ex-cell-text {
+      font-size: 1.05rem; /* ← STØRRE */
+      line-height: 1.65;
+      font-style: italic;
+      opacity: 0.85;
+    }
+    .ex-cell.new .ex-cell-text {
+      font-style: normal;
+      opacity: 1;
+      font-weight: 400;
+    }
+    .ex-why {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 24px 30px; /* ← MERE PADDING */
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ex-why-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0.7;
+    }
+    .ex-why-text {
+      font-size: 1rem; /* ← STØRRE */
+      line-height: 1.65;
+      color: rgba(255,255,255,0.75);
+    }
+    .ex-why-text strong { color: #fff; font-weight: 700; }
 
     .title-accent {
-      width: 64px;
-      height: 6px;
+      width: 72px; height: 6px;
       background: var(--cream);
       border-radius: 99px;
       margin: 20px auto 0;
     }
 
-    .cta-box {
-      margin-top: 40px;
-      background: rgba(255,255,255,0.15);
-      border: 2px solid rgba(255,255,255,0.3);
-      border-radius: 16px;
-      padding: 24px 40px;
-      text-align: center;
-      max-width: 660px;
-    }
-    .cta-box p { font-size: 1.05rem; font-weight: 400; line-height: 1.6; }
-    .cta-box strong { font-weight: 700; }
-
+    /* ─── Nav ─── */
     .nav {
       position: fixed;
       bottom: 36px;
@@ -309,9 +357,8 @@
       border: none;
       cursor: pointer;
       color: #fff;
-      font-size: 1.3rem;
-      width: 36px;
-      height: 36px;
+      font-size: 1.4rem;
+      width: 40px; height: 40px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -319,10 +366,9 @@
       transition: background 0.2s;
     }
     .nav-btn:hover { background: rgba(255,255,255,0.2); }
-    .nav-dots { display: flex; gap: 7px; align-items: center; }
+    .nav-dots { display: flex; gap: 8px; align-items: center; }
     .dot {
-      width: 8px;
-      height: 8px;
+      width: 9px; height: 9px;
       border-radius: 50%;
       background: rgba(255,255,255,0.35);
       cursor: pointer;
@@ -332,11 +378,9 @@
 
     .key-hint {
       position: fixed;
-      top: 22px;
-      right: 36px;
-      font-size: 11px;
+      top: 22px; right: 36px;
+      font-size: 0.7rem;
       color: rgba(255,255,255,0.35);
-      font-family: 'Alinea', Arial, sans-serif;
       letter-spacing: 0.5px;
       z-index: 100;
     }
@@ -361,7 +405,7 @@
 
   <!-- SLIDE 1 — Titel -->
   <section class="slide slide-blue active" id="s1">
-    <img src="alinea_logo.png" class="logo logo-white" alt="Alinea logo" />
+    <img src="./alinea_logo.png" class="logo logo-white" alt="Alinea logo" />
     <div class="tag" style="color:rgba(255,255,255,0.6);">Intern præsentation · 2026</div>
     <h1>Sælg mere.<br/>Bevar kvaliteten.</h1>
     <div class="title-accent"></div>
@@ -369,15 +413,15 @@
       Et AI-værktøj der omdanner vores faktuelle bogtekster<br/>
       til professionelle salgstekster — i Alineas egen stemme.
     </p>
-    <span class="slide-num">01 / 05</span>
+    <span class="slide-num">01 / 07</span>
   </section>
 
   <!-- SLIDE 2 — Hvad er assistenten? -->
   <section class="slide slide-cream" id="s2">
-    <img src="alinea_logo.png" class="logo logo-dark" alt="Alinea logo" />
+    <img src="./alinea_logo.png" class="logo logo-dark" alt="Alinea logo" />
     <div class="tag">Hvad er assistenten?</div>
-    <h2>En AI-redaktør der kender<br/>Alineas stemme</h2>
-    <div class="card-grid card-grid-3" style="margin-top:36px;">
+    <h2>En AI-redaktørassistent der kender<br/>Alineas stemme</h2>
+    <div class="card-grid card-grid-3">
       <div class="card card-blue">
         <div class="card-icon">📥</div>
         <div class="card-title">Input</div>
@@ -394,15 +438,15 @@
         <div class="card-body">2 versioner + en forklaring på præcis hvad der er ændret og hvorfor det sælger bedre.</div>
       </div>
     </div>
-    <p class="subtitle" style="margin-top:28px; font-size:0.95rem;">
+    <p class="subtitle" style="margin-top:28px; font-size:1.05rem;">
       Målrettet <strong>lærere, skolebibliotekarer og pædagogiske konsulenter</strong> — dem der vælger og køber.
     </p>
-    <span class="slide-num">02 / 05</span>
+    <span class="slide-num">02 / 07</span>
   </section>
 
   <!-- SLIDE 3 — Flow -->
   <section class="slide slide-white" id="s3">
-    <img src="alinea_logo.png" class="logo logo-dark" alt="Alinea logo" />
+    <img src="./alinea_logo.png" class="logo logo-dark" alt="Alinea logo" />
     <div class="tag" style="color:var(--blue);">Sådan fungerer den</div>
     <h2>Fra tekst til salgstekst<br/>i 6 trin</h2>
     <div class="flow">
@@ -460,12 +504,12 @@
         </div>
       </div>
     </div>
-    <span class="slide-num">03 / 05</span>
+    <span class="slide-num">03 / 07</span>
   </section>
 
-  <!-- SLIDE 4 — Hvad ændres? (OPDATERET) -->
+  <!-- SLIDE 4 — Hvad ændres? -->
   <section class="slide slide-purple" id="s4">
-    <img src="alinea_logo.png" class="logo logo-dark" alt="Alinea logo" />
+    <img src="./alinea_logo.png" class="logo logo-dark" alt="Alinea logo" />
     <div class="tag">Hvad ændres?</div>
     <h2>Samme fakta. Stærkere budskab.</h2>
     <div class="compare">
@@ -484,49 +528,86 @@
         <div class="compare-item" style="color:#fff;"><span class="icon">💰</span><span><strong>Prisen taler for sig selv</strong><br/>Tidsbesparelse + kvalitet + fordele synliggjort direkte i teksten</span></div>
       </div>
     </div>
-    <p style="font-size:0.82rem; margin-top:18px; opacity:0.6; font-style:italic;">Fakta, fagbegreber og klassetrin forbliver 100% uændrede.</p>
-    <span class="slide-num">04 / 05</span>
+    <p style="font-size:0.9rem; margin-top:18px; opacity:0.6; font-style:italic;">Fakta, fagbegreber og klassetrin forbliver 100% uændrede.</p>
+    <span class="slide-num">04 / 07</span>
   </section>
 
-  <!-- SLIDE 5 — Fordele -->
+  <!-- SLIDE 5 — Eksempel 1 -->
   <section class="slide slide-dark" id="s5">
-    <img src="alinea_logo.png" class="logo logo-white" alt="Alinea logo" />
-    <div class="tag" style="color:rgba(255,255,255,0.45);">Hvad vinder Alinea?</div>
-    <h2 style="color:#fff;">Sælg mere.<br/>Ingen kompromiser.</h2>
-    <div class="benefits" style="margin-top:30px;">
-      <div class="benefit">
-        <div class="benefit-icon">⚡</div>
-        <div class="benefit-text">
-          <h3>Hurtigere produktion</h3>
-          <p>Redaktøren starter ikke fra bunden. Slagkraftig tekst på få minutter.</p>
+    <img src="./alinea_logo.png" class="logo logo-white" alt="Alinea logo" />
+    <div class="tag" style="color:rgba(255,255,255,0.4);">Eksempel 1 — Overskriften</div>
+    <h2 style="color:#fff; margin-bottom: 28px;">Fra tom beskrivelse<br/>til præcis relevans</h2>
+    <div class="ex-slide-inner">
+      <div class="ex-top">
+        <div class="ex-cell old">
+          <div class="ex-cell-tag">❌ Gammel tekst</div>
+          <div class="ex-cell-text">"En innovativ matematikbog til regnestrategitræning"</div>
+        </div>
+        <div class="ex-cell new">
+          <div class="ex-cell-tag" style="color:var(--cream);">✅ Ny tekst</div>
+          <div class="ex-cell-text">"Dyrenes butik — strukturerede matematiklektioner med højtlæsning til 1.-3. klasse"</div>
         </div>
       </div>
-      <div class="benefit">
-        <div class="benefit-icon">🎯</div>
-        <div class="benefit-text">
-          <h3>Konsistent Alinea-tone</h3>
-          <p>Altid samme stemme — uanset hvem i teamet der bruger assistenten.</p>
-        </div>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">💪</div>
-        <div class="benefit-text">
-          <h3>Stærkere salgsargumenter</h3>
-          <p>Teksterne forsvarer prisen og fremhæver konkret værdi for køberen.</p>
-        </div>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">🔒</div>
-        <div class="benefit-text">
-          <h3>Nul faktafejl</h3>
-          <p>Assistenten opfinder aldrig noget. Fakta er hellige — altid.</p>
+      <div class="ex-why">
+        <div class="ex-why-label">💡 Hvorfor virker den nye bedre?</div>
+        <div class="ex-why-text">
+          Den gamle overskrift nævner hverken bogens titel eller klassetrin — og kunne beskrive enhver matematikbog på markedet. <strong>Ord som "innovativ" er et tomt superlativ</strong>, der ikke fortæller læreren noget konkret. Den nye overskrift forankrer sig i bogens navn, dens pædagogiske metode (højtlæsning) og målgruppen (1.-3. klasse) — <strong>så læreren med det samme ved, om bogen er relevant for dem.</strong>
         </div>
       </div>
     </div>
-    <div class="cta-box">
-      <p>Et værktøj der hjælper os med at <strong>sælge mere</strong> —<br/>uden at gå på kompromis med teksternes niveau og troværdighed.</p>
+    <span class="slide-num" style="color:rgba(255,255,255,0.35);">05 / 07</span>
+  </section>
+
+  <!-- SLIDE 6 — Eksempel 2 -->
+  <section class="slide slide-dark" id="s6">
+    <img src="./alinea_logo.png" class="logo logo-white" alt="Alinea logo" />
+    <div class="tag" style="color:rgba(255,255,255,0.4);">Eksempel 2 — Beskrivelsen af bogens formål</div>
+    <h2 style="color:#fff; margin-bottom: 28px;">Fra abstrakt til<br/>konkret og synlig</h2>
+    <div class="ex-slide-inner">
+      <div class="ex-top">
+        <div class="ex-cell old">
+          <div class="ex-cell-tag">❌ Gammel tekst</div>
+          <div class="ex-cell-text">"Dette unikke materiale er skabt for at styrke elevernes matematiske nysgerrighed og strategiske tænkning gennem spændende historier, og det bygger bro mellem en god læseoplevelse og dybdegående matematikforståelse, hvilket skaber deltagelsesmuligheder for alle elever."</div>
+        </div>
+        <div class="ex-cell new">
+          <div class="ex-cell-tag" style="color:var(--cream);">✅ Ny tekst</div>
+          <div class="ex-cell-text">"Hvert af bogens 17 kapitler starter med en fængende fortælling, der sætter rammen for dagens matematiske problem. Derefter arbejder eleverne i makkerpar med tilgangen <em>Byg det, tegn det, regn det</em> — fra det konkrete til det abstrakte — inden klassen samles om at præsentere og diskutere de mange strategier, eleverne har brugt."</div>
+        </div>
+      </div>
+      <div class="ex-why">
+        <div class="ex-why-label">💡 Hvorfor virker den nye bedre?</div>
+        <div class="ex-why-text">
+          Den gamle tekst er fuld af abstrakte begreber — <strong>"unikke", "dybdegående matematikforståelse", "bygger bro"</strong> — uden at forklare hvordan det sker i praksis. Den nye tekst beskriver i stedet den konkrete lektionsgang trin for trin, <strong>så læreren kan forestille sig, hvad der faktisk foregår i klasselokalet.</strong> Konkret er mere overbevisende end abstrakt.
+        </div>
+      </div>
     </div>
-    <span class="slide-num" style="color:rgba(255,255,255,0.35);">05 / 05</span>
+    <span class="slide-num" style="color:rgba(255,255,255,0.35);">06 / 07</span>
+  </section>
+
+  <!-- SLIDE 7 — Eksempel 3 -->
+  <section class="slide slide-dark" id="s7">
+    <img src="./alinea_logo.png" class="logo logo-white" alt="Alinea logo" />
+    <div class="tag" style="color:rgba(255,255,255,0.4);">Eksempel 3 — Lærervejledningen</div>
+    <h2 style="color:#fff; margin-bottom: 28px;">Fra hvad den er<br/>til hvad den giver dig</h2>
+    <div class="ex-slide-inner">
+      <div class="ex-top">
+        <div class="ex-cell old">
+          <div class="ex-cell-tag">❌ Gammel tekst</div>
+          <div class="ex-cell-text">"Efter hvert kapitel findes en skræddersyet lærervejledning, der sikrer en tryg og grundig undervisning med klar baggrundsviden, centrale spørgsmål og forventede elevbesvarelser."</div>
+        </div>
+        <div class="ex-cell new">
+          <div class="ex-cell-tag" style="color:var(--cream);">✅ Ny tekst</div>
+          <div class="ex-cell-text">"Lærervejledningen er integreret direkte efter hvert kapitel med baggrundsviden, centrale spørgsmål og forventede elevbesvarelser — så du er klædt godt på, uanset hvor i forløbet du er."</div>
+        </div>
+      </div>
+      <div class="ex-why">
+        <div class="ex-why-label">💡 Hvorfor virker den nye bedre?</div>
+        <div class="ex-why-text">
+          Den gamle tekst beskriver lærervejledningen udefra — <strong>hvad den er</strong>. Den nye tekst oversætter den samme information til en fordel for læreren — <strong>hvad den giver dig</strong>. Tilføjelsen "uanset hvor i forløbet du er" afspejler, at bogen kan bruges fleksibelt efter behov. Det er stadig den samme information — men nu formuleret, så læreren kan mærke relevansen direkte.
+        </div>
+      </div>
+    </div>
+    <span class="slide-num" style="color:rgba(255,255,255,0.35);">07 / 07</span>
   </section>
 
 </div>
@@ -575,3 +656,10 @@
 
 </body>
 </html>
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
